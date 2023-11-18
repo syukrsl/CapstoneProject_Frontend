@@ -1,17 +1,17 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
-function SignIn() {
+function SignUp() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
-  const handleSignIn = () => {
-    // Handle sign-in logic here (e.g., API request)
+  const handleSignUp = () => {
+    // Handle sign-up logic here (e.g., API request)
   };
 
   return (
     <div>
-      <h2>Sign In</h2>
+      <h2>Sign Up</h2>
       <form>
         <input
           type="email"
@@ -25,11 +25,11 @@ function SignIn() {
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
-        <button onClick={handleSignIn}>Sign In</button>
+        <button onClick={handleSignUp}>Sign Up</button>
       </form>
-      <p>Dont have an account? <Link to="/sign-up">Sign Up</Link></p>
+      <p>Already have an account? <Link to="/sign-in">Sign In</Link></p>
     </div>
   );
 }
 
-export default SignIn;
+export default SignUp;
