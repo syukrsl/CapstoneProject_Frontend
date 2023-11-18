@@ -1,61 +1,131 @@
 import React, { useState, useEffect } from 'react';
+import './News.css';
 
 function News() {
   const [singaporeNews, setSingaporeNews] = useState([]);
   const [asiaNews, setAsiaNews] = useState([]);
-  // ... similar useState declarations for other categories
+  const [worldNews, setWorldNews] = useState([]);
+  const [businessNews, setBusinessNews] = useState([]);
+  const [techNews, setTechNews] = useState([]);
+  const [sportsNews, setSportsNews] = useState([]);
 
   useEffect(() => {
-    // Define your API keys
-    const newsApiKey = 'YOUR_NEWS_API_KEY';
-    // ... other API keys if different
+    const newsApiKey = '114de16144fb4279a687c35eebcd7a1a';
 
-    // Singapore News API call
-    const singaporeApiUrl = `https://newsapi.org/v2/top-headlines?country=sg&apiKey=${newsApiKey}`;
-    // Asia News API call (modify as needed)
-    const asiaApiUrl = `https://newsapi.org/v2/everything?q=asia&apiKey=${newsApiKey}`;
-    // ... similar API URL declarations for other categories
+    // API URLs
+    const singaporeApiUrl = `https://newsapi.org/v2/top-headlines?country=sg&pageSize=10&apiKey=${newsApiKey}`;
+    const asiaApiUrl = `https://newsapi.org/v2/everything?q=asia&pageSize=10&apiKey=${newsApiKey}`;
+    const worldApiUrl = `https://newsapi.org/v2/everything?q=world&pageSize=10&apiKey=${newsApiKey}`;
+    const businessApiUrl = `https://newsapi.org/v2/top-headlines?category=business&pageSize=10&apiKey=${newsApiKey}`;
+    const techApiUrl = `https://newsapi.org/v2/top-headlines?sources=techcrunch&pageSize=10&apiKey=${newsApiKey}`;
+    const sportsApiUrl = `https://newsapi.org/v2/top-headlines?country=sg&category=sports&pageSize=10&apiKey=${newsApiKey}`;
 
-    // Fetch Singapore News
-    fetch(singaporeApiUrl)
-      .then(response => response.json())
-      .then(data => setSingaporeNews(data.articles))
-      .catch(error => console.error(error));
+    const fetchNews = async (url, setter) => {
+      try {
+        const response = await fetch(url);
+        const data = await response.json();
+        setter(data.articles);
+      } catch (error) {
+        console.error(error);
+      }
+    };
 
-    // Fetch Asia News
-    fetch(asiaApiUrl)
-      .then(response => response.json())
-      .then(data => setAsiaNews(data.articles))
-      .catch(error => console.error(error));
-
-    // ... similar fetch calls for other categories
+    fetchNews(singaporeApiUrl, setSingaporeNews);
+    fetchNews(asiaApiUrl, setAsiaNews);
+    fetchNews(worldApiUrl, setWorldNews);
+    fetchNews(businessApiUrl, setBusinessNews);
+    fetchNews(techApiUrl, setTechNews);
+    fetchNews(sportsApiUrl, setSportsNews);
   }, []);
 
   return (
-    <div>
-      <h2>Singapore News</h2>
-      <ul>
-        {singaporeNews.map((article, index) => (
-          <li key={index}>
-            <a href={article.url} target="_blank" rel="noopener noreferrer">
-              {article.title}
-            </a>
-          </li>
-        ))}
-      </ul>
+    <div className="container mt-5">
+      <div className="card news-card">
+        <div className="card-header">
+          <h2 className="card-title text-white text-center">News</h2>
+        </div>
+        <div className="card-body">
+          <div className="news-categories">
+            <div className="category">
+              <h2>Singapore News</h2>
+              <ul>
+                {singaporeNews.map((article, index) => (
+                  <li key={index}>
+                    <a href={article.url} target="_blank" rel="noopener noreferrer">
+                      {article.title}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
 
-      <h2>Asia News</h2>
-      <ul>
-        {asiaNews.map((article, index) => (
-          <li key={index}>
-            <a href={article.url} target="_blank" rel="noopener noreferrer">
-              {article.title}
-            </a>
-          </li>
-        ))}
-      </ul>
+            <div className="category">
+              <h2>Asia News</h2>
+              <ul>
+                {asiaNews.map((article, index) => (
+                  <li key={index}>
+                    <a href={article.url} target="_blank" rel="noopener noreferrer">
+                      {article.title}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
 
-      {/* Similar list rendering for other categories */}
+            <div className="category">
+              <h2>World News</h2>
+              <ul>
+                {worldNews.map((article, index) => (
+                  <li key={index}>
+                    <a href={article.url} target="_blank" rel="noopener noreferrer">
+                      {article.title}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div className="category">
+              <h2>Business News</h2>
+              <ul>
+                {businessNews.map((article, index) => (
+                  <li key={index}>
+                    <a href={article.url} target="_blank" rel="noopener noreferrer">
+                      {article.title}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div className="category">
+              <h2>Tech News</h2>
+              <ul>
+                {techNews.map((article, index) => (
+                  <li key={index}>
+                    <a href={article.url} target="_blank" rel="noopener noreferrer">
+                      {article.title}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div className="category">
+              <h2>Sports News</h2>
+              <ul>
+                {sportsNews.map((article, index) => (
+                  <li key={index}>
+                    <a href={article.url} target="_blank" rel="noopener noreferrer">
+                      {article.title}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
