@@ -1,69 +1,110 @@
+/* WelcomePage.css */
+
+/* Inter font-face declarations */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 100;
+  font-display: swap;
+  src: url("Inter Web/Inter-Thin.woff2?v=3.18") format("woff2"),
+       url("Inter Web/Inter-Thin.woff?v=3.18") format("woff");
+}
+/* ... Other font-face declarations ... */
+
+/* Styles for the welcome page */
 body {
-      background-color: #f5f8fa; /* Light blue-gray background */
-    }
-    
-    /* Center the content vertically and horizontally */
-    .welcome-page {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 100vh; /* Full viewport height */
-    }
-    
-    /* Card-like container for the login form */
-    .login-card {
-      background-color: #ffffff; /* White card background */
-      border-radius: 10px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      padding: 20px;
-      text-align: center;
-    }
-    
-    /* Header text color */
-    h1 {
-      color: #1da1f2; /* Twitter blue */
-    }
-    
-    /* Input fields and button styles */
-    input[type="email"],
-    input[type="password"],
-    button {
-      width: 95%; /* Reduce the width slightly */
-      padding: 10px; /* Add padding to all sides */
-      margin: 10px 0;
-      border: 1px solid #d1d9e0; /* Light gray border */
-      border-radius: 5px;
-    }
-    
-    input[type="email"],
-    input[type="password"] {
-      height: 40px;
-      font-size: 16px;
-      padding-left: 10px;
-    }
-    
-    button {
-      background-color: #1da1f2; /* Twitter blue */
-      color: #fff; /* White text color */
-      font-size: 16px;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      transition: background-color 0.2s ease-in-out;
-    }
-    
-    button:hover {
-      background-color: #0e71a1; /* Darker blue on hover */
-    }
-    
-    /* Sign-up link color */
-    p {
-      color: #1da1f2; /* Twitter blue for links */
-    }
-    
-    /* Link hover color */
-    a {
-      color: #0e71a1; /* Darker blue on hover */
-    }
-    
+  background-color: #ffffff; /* White background */
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+/* Center the content vertically and horizontally */
+.welcome-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh; /* Full viewport height */
+  padding: 20px;
+}
+
+/* Card-like container for the login form */
+.login-card {
+  background-color: #f5f8fa; /* Light blue-gray background */
+  border-radius: 50px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 30px; /* Increased padding for a slightly bigger card */
+  text-align: center;
+  max-width: 400px;
+  width: 100%;
+}
+
+/* Header text color */
+h1 {
+  color: #1da1f2; /* Twitter blue */
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+/* Input fields, textarea, and button styles */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea,
+button {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #d1d9e0; /* Light gray border */
+  border-radius: 4px;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea {
+  height: 48px;
+  padding-left: 2px;
+  
+}
+
+/* Add specific styling for textarea elements */
+textarea {
+  /* Adjust the padding and margin as needed */
+  padding: 0px;
+  padding-right: 12px;
+  margin: 10px 0px;
+  /* Add any other styles you need */
+  min-height: 100px; /* Adjust the minimum height as needed */
+  resize: vertical; /* Allow vertical resizing of the textarea */
+}
+
+button {
+  background-color: #1da1f2; /* Twitter blue */
+  color: #fff; /* White text color */
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+button:hover {
+  background-color: #0e71a1; /* Darker blue on hover */
+}
+
+/* Sign-up link color */
+p {
+  color: #1da1f2; /* Twitter blue for links */
+  margin-top: 16px;
+  font-size: 16px;
+}
+
+/* Link hover color */
+a {
+  color: #0e71a1; /* Darker blue on hover */
+}

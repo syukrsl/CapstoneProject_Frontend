@@ -1,7 +1,8 @@
 import React from "react";
+import "./AuthenticatedHome.css";
 import { useNavigate } from "react-router-dom";
 
-function AuthenticatedWelcome() {
+function AuthenticatedHome() {
   const navigate = useNavigate();
 
   // Function to navigate to AuthenticatedHome.jsx
@@ -10,12 +11,14 @@ function AuthenticatedWelcome() {
   };
 
   return (
-    <div>
-      <h1>Welcome to the Authenticated Welcome Page!</h1>
+    <div className="authenticated-home">
+      <h1>Welcome to the Authenticated Home Page!</h1>
       {/* Add content for authenticated users */}
-      <button onClick={goToAuthenticatedHome}>Go to Authenticated Home</button>
+      <button onClick={goToAuthenticatedHome} className="btn btn-primary">
+        Go to Authenticated Home
+      </button>
     </div>
   );
 }
 
-export default AuthenticatedWelcome;
+export default AuthenticatedHome;

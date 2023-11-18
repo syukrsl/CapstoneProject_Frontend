@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import "./SignUp.css"; // Import your CSS file for styling
+import "./WelcomePage.css"; // Import your CSS file for styling
 
 function SignUp() {
   const [name, setName] = useState("");
