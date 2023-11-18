@@ -8,6 +8,8 @@ import MeetingNotes from './components/MeetingNotes.jsx';
 import ClassicGames from './components/ClassicGames.jsx';
 import News from './pages/News.jsx';
 import AuthenticatedHome from './pages/AuthenticatedHome.jsx';
+import AuthenticatedWelcome from "./pages/AuthenticatedWelcome"; 
+import RegistrationSuccess from "./pages/RegistrationSuccess";
 function App() {
   return (
     <Routes>
@@ -19,6 +21,9 @@ function App() {
       <Route path="/notes" element={<MeetingNotes />} />
       <Route path="/games" element={<ClassicGames />} />
       <Route path="/" element={<WelcomePage />} />
+      <Route path="/authenticated-welcome" element={<AuthenticatedWelcome />} />
+      <Route path="/authenticated-home" element={<AuthenticatedHome />} />
+      <Route path="/registration-success" element={<RegistrationSuccess />} />
     </Routes>
   );
 }

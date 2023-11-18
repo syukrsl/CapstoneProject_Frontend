@@ -1,23 +1,48 @@
-
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import "./WelcomePage.css"; // Import your CSS file for styling
+import { Link, useNavigate } from "react-router-dom";
+import "./SignUp.css"; // Import your CSS file for styling
 
-function WelcomePage() {
+function SignUp() {
+  const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const navigate = useNavigate(); // Initialize useNavigate
 
-  const handleLogin = () => {
-    // Handle login logic here, e.g., making an API request
+  const handleSignUp = async (event) => {
+    event.preventDefault();
+
+    try {
+      // Make an API POST request to your backend's registration endpoint
+      // ...
+
+      // Assuming registration was successful:
+      const registrationSuccessful = true; // Replace with your registration success logic
+
+      if (registrationSuccessful) {
+        // Redirect the user to a page that shows "Registration Successful"
+        navigate("/registration-success");
+      } else {
+        // Handle registration error (e.g., display error message)
+        console.error("Registration failed.");
+      }
+    } catch (error) {
+      console.error("An error occurred during registration:", error);
+    }
   };
 
   return (
     <div className="welcome-page">
       <div className="login-card">
-        <h1>Welcome to CollabSphere</h1>
+        <h1>Welcome to Sphere</h1>
 
-        {/* Login form */}
+        {/* Sign-up form */}
         <form>
+          <input
+            type="text"
+            placeholder="Full Name"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+          />
           <input
             type="email"
             placeholder="Email"
@@ -30,14 +55,16 @@ function WelcomePage() {
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
-          <button onClick={handleLogin}>Login</button>
+          <button onClick={handleSignUp}>Sign Up</button>
         </form>
 
-        {/* Sign-up link */}
-        <p>Dont have an account? <Link to="/sign-up">Sign Up</Link></p>
+        {/* Sign-in link */}
+        <p>
+          Already have an account? <Link to="/sign-in">Sign In</Link>
+        </p>
       </div>
     </div>
   );
 }
 
-export default WelcomePage;
+export default SignUp;

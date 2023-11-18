@@ -1,15 +1,38 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./SignUp.css"; // Import your CSS file for styling
 
 function SignUp() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const navigate = useNavigate(); // Initialize useNavigate
 
-  const handleSignUp = () => {
-    // Handle sign-up logic here, e.g., making an API request
+  const handleSignUp = async (event) => {
+    event.preventDefault();
+  
+    try {
+      const response = await fetch("http://localhost:8080/sign-up", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ name, email, password }),
+      });
+  
+      if (response.ok) {
+        // Registration was successful
+        // Redirect the user to a page that shows "Registration Successful"
+        navigate("/registration-success");
+      } else {
+        // Handle registration error (e.g., display error message)
+        console.error("Registration failed.");
+      }
+    } catch (error) {
+      console.error("An error occurred during registration:", error);
+    }
   };
+  
 
   return (
     <div className="welcome-page">
@@ -39,8 +62,10 @@ function SignUp() {
           <button onClick={handleSignUp}>Sign Up</button>
         </form>
 
-        {/* Login link */}
-        <p>Already have an account? <Link to="/login">Login</Link></p>
+        {/* Sign-in link */}
+        <p>
+          Already have an account? <Link to="/sign-in">Sign In</Link>
+        </p>
       </div>
     </div>
   );
