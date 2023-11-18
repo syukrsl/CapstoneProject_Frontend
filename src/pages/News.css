@@ -1,7 +1,4 @@
-/* News.css */
-
-/* Apply the same background color as other pages */
-.news-card {
+      .news-card {
       background-color: #f5f8fa; /* Light blue-gray background */
       border: 1px solid #e1e8ed;
       border-radius: 10px;

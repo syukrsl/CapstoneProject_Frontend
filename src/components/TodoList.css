@@ -1,6 +1,4 @@
-/* TodoList.css */
 
-/* Apply the same background color as other pages */
 .meeting-card {
       background-color: #fff;
       border: 1px solid #e1e8ed;
@@ -13,7 +11,7 @@
     /* Style the card title */
     .card-title {
       font-size: 24px;
-      color: #1da1f2; /* Twitter blue */
+      color: #e1eaf0; /* Twitter blue */
     }
     
     /* Style the task input */
