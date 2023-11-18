@@ -9,26 +9,36 @@ function SignUp() {
   const navigate = useNavigate(); // Initialize useNavigate
 
   const handleSignUp = async (event) => {
-    event.preventDefault();
+  event.preventDefault();
 
-    try {
-      // Make an API POST request to your backend's registration endpoint
-      // ...
+  // Check if any of the fields (name, email, password) are empty
+  if (!name || !email || !password) {
+    console.error("Please fill in all the required fields.");
+    return;
+  }
 
-      // Assuming registration was successful:
-      const registrationSuccessful = true; // Replace with your registration success logic
+  try {
+    const response = await fetch("http://localhost:8080/sign-up", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ name, email, password }),
+    });
 
-      if (registrationSuccessful) {
-        // Redirect the user to a page that shows "Registration Successful"
-        navigate("/registration-success");
-      } else {
-        // Handle registration error (e.g., display error message)
-        console.error("Registration failed.");
-      }
-    } catch (error) {
-      console.error("An error occurred during registration:", error);
+    if (response.ok) {
+      // Registration was successful
+      // Redirect the user to a page that shows "Registration Successful"
+      navigate("/registration-success");
+    } else {
+      // Handle registration error (e.g., display error message)
+      console.error("Registration failed.");
     }
-  };
+  } catch (error) {
+    console.error("An error occurred during registration:", error);
+  }
+};
+
 
   return (
     <div className="welcome-page">

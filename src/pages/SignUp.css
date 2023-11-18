@@ -30,11 +30,12 @@ body {
     input[type="email"],
     input[type="password"],
     button {
-      width: 100%;
+      width: 90%;
       padding: 10px;
       margin: 10px 0;
-      border: 1px solid #d1d9e0; /* Light gray border */
-      border-radius: 5px;
+      border: 1px solid rgb(146, 146, 154);/* Light gray border */
+      border-radius: 10px;
+      
     }
     
     input[type="text"],
@@ -52,7 +53,7 @@ body {
       border: none;
       border-radius: 5px;
       cursor: pointer;
-      transition: background-color 0.2s ease-in-out;
+      transition: background-color 0.05s;
     }
     
     button:hover {

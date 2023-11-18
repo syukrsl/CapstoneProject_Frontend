@@ -10,6 +10,12 @@ function SignIn() {
   const handleSignIn = async (e) => {
     e.preventDefault();
 
+    // Check if either the email or password field is empty
+    if (!email || !password) {
+      console.error("Please fill in both email and password.");
+      return;
+    }
+
     try {
       const response = await fetch("http://localhost:8080/sign-in", {
         method: "POST",
@@ -37,7 +43,7 @@ function SignIn() {
   };
 
   return (
-    <div className="welcome-page">
+    <div className="sign-in-page">
       <div className="login-card">
         <h2>Sign In</h2>
 

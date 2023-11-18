@@ -9,29 +9,36 @@ function SignUp() {
   const navigate = useNavigate(); // Initialize useNavigate
 
   const handleSignUp = async (event) => {
-    event.preventDefault();
-  
-    try {
-      const response = await fetch("http://localhost:8080/sign-up", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ name, email, password }),
-      });
-  
-      if (response.ok) {
-        // Registration was successful
-        // Redirect the user to a page that shows "Registration Successful"
-        navigate("/registration-success");
-      } else {
-        // Handle registration error (e.g., display error message)
-        console.error("Registration failed.");
-      }
-    } catch (error) {
-      console.error("An error occurred during registration:", error);
+  event.preventDefault();
+
+  // Check if any of the fields (name, email, password) are empty
+  if (!name || !email || !password) {
+    console.error("Please fill in all the required fields.");
+    return;
+  }
+
+  try {
+    const response = await fetch("http://localhost:8080/sign-up", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ name, email, password }),
+    });
+
+    if (response.ok) {
+      // Registration was successful
+      // Redirect the user to a page that shows "Registration Successful"
+      navigate("/registration-success");
+    } else {
+      // Handle registration error (e.g., display error message)
+      console.error("Registration failed.");
     }
-  };
+  } catch (error) {
+    console.error("An error occurred during registration:", error);
+  }
+};
+
   
 
   return (
