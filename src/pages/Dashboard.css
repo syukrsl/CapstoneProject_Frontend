@@ -1,0 +1,65 @@
+/* Dashboard.css */
+
+.dashboard {
+  display: flex;
+  height: 100vh;
+}
+
+.sidebar {
+  width: 280px;
+  background-color: #3f3f3f; /* Dark gray background */
+  color: #ffffff; /* White text color */
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.dashboard-header {
+  padding: 10px 20px;
+  font-size: 24px; /* Increase font size for header */
+  color: #ffffff; /* White text color */
+  background-color: #3f3f3f; /* Dark gray background */
+  font-weight: bold; /* Make it bold */
+}
+
+.tab-item {
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  color: #ffffff; /* White text color */
+  text-decoration: none;
+}
+
+
+.tab-item:hover {
+  background-color: #4f4f4f; /* Slightly lighter gray on hover */
+}
+
+.tab-item.active {
+  background-color: #4f4f4f; /* Active tab background color */
+}
+
+/* Spacer */
+.spacer {
+  flex-grow: 4; /* Expands to fill the remaining space */
+}
+
+/* Settings and Logout */
+.settings-logout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 20px; /* Add some space at the bottom */
+}
+
+.logout-button {
+  /* Apply styles similar to the user icon button in ChatGPT's navbar */
+  background-color: #3f51b5; /* Customize the background color */
+  color: #ffffff; /* Customize the text color */
+  padding: 10px 20px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 24px;
+}
+
+

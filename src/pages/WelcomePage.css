@@ -1,71 +1,72 @@
 body {
-  background-color: #f5f8fa; /* Light blue-gray background */
-}
-
-/* Center the content vertically and horizontally */
-.welcome-page {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100vh; /* Full viewport height */
-}
-
-/* Card-like container for the sign-up form */
-.login-card {
-  background-color: #ffffff; /* White card background */
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  text-align: center;
-}
-
-/* Header text color */
-h1 {
-  color: #1da1f2; /* Twitter blue */
-}
-
-/* Input fields and button styles */
-input[type="text"],
-input[type="email"],
-input[type="password"],
-button {
-  width: 90%;
-  padding: 10px;
-  margin: 10px 0;
-  border: 1px solid rgb(146, 146, 154);/* Light gray border */
-  border-radius: 10px;
-  
-}
-
-input[type="text"],
-input[type="email"],
-input[type="password"] {
-  height: 40px;
-  font-size: 16px;
-  padding-left: 10px;
-}
-
-button {
-  background-color: #1da1f2; /* Twitter blue */
-  color: #fff; /* White text color */
-  font-size: 16px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.05s;
-}
-
-button:hover {
-  background-color: #0e71a1; /* Darker blue on hover */
-}
-
-/* Login link color */
-p {
-  color: #1da1f2; /* Twitter blue for links */
-}
-
-/* Link hover color */
-a {
-  color: #0e71a1; /* Darker blue on hover */
-}
+      background-color: #f5f8fa; /* Light blue-gray background */
+    }
+    
+    /* Center the content vertically and horizontally */
+    .welcome-page {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh; /* Full viewport height */
+    }
+    
+    /* Card-like container for the sign-up form */
+    .login-card {
+      background-color: #ffffff; /* White card background */
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      text-align: center;
+    }
+    
+    /* Header text color */
+    h1 {
+      color: #1da1f2; /* Twitter blue */
+    }
+    
+    /* Input fields and button styles */
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    button {
+      width: 90%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid rgb(146, 146, 154);/* Light gray border */
+      border-radius: 10px;
+      
+    }
+    
+    input[type="text"],
+    input[type="email"],
+    input[type="password"] {
+      height: 40px;
+      font-size: 16px;
+      padding-left: 10px;
+    }
+    
+    button {
+      background-color: #1da1f2; /* Twitter blue */
+      color: #fff; /* White text color */
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.05s;
+    }
+    
+    button:hover {
+      background-color: #0e71a1; /* Darker blue on hover */
+    }
+    
+    /* Login link color */
+    p {
+      color: #1da1f2; /* Twitter blue for links */
+    }
+    
+    /* Link hover color */
+    a {
+      color: #0e71a1; /* Darker blue on hover */
+    }
+    
