@@ -15,8 +15,32 @@ function Dashboard() {
   };
 
   // Function to handle logout (replace with your actual logout logic)
-  const handleLogout = () => {
-    // Perform logout actions
+  const handleLogout = async () => {
+    try {
+      // Make a request to the server's /logout endpoint to log the user out
+      const response = await fetch("/logout", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({}),
+      });
+
+      if (response.status === 200) {
+        // Clear the authentication token (assuming you store it in local storage)
+        localStorage.removeItem("authToken");
+
+        // Redirect the user to the login page
+        history.push("/login");
+      } else {
+        // Handle any errors that may occur during logout
+        console.error("Logout failed");
+        // Optionally, you can display an error message to the user
+      }
+    } catch (error) {
+      console.error("An error occurred during logout:", error);
+      // Handle any network or other errors that may occur
+    }
   };
 
   return (
@@ -33,6 +57,12 @@ function Dashboard() {
           User Profile
         </div>
         <div
+          className={`tab-item ${activeTab === "Leave" ? "active" : ""}`}
+          onClick={() => handleTabChange("Leave")}
+        >
+          Leave & Absences
+        </div>
+        <div
           className={`tab-item ${activeTab === "MeetingNotes" ? "active" : ""}`}
           onClick={() => handleTabChange("MeetingNotes")}
         >
@@ -45,16 +75,16 @@ function Dashboard() {
           TodoList
         </div>
         <div
-          className={`tab-item ${activeTab === "ClassicGames" ? "active" : ""}`}
-          onClick={() => handleTabChange("ClassicGames")}
-        >
-          Classic Games
-        </div>
-        <div
           className={`tab-item ${activeTab === "News" ? "active" : ""}`}
           onClick={() => handleTabChange("News")}
         >
           News
+        </div>
+        <div
+          className={`tab-item ${activeTab === "ClassicGames" ? "active" : ""}`}
+          onClick={() => handleTabChange("ClassicGames")}
+        >
+          Classic Games
         </div>
         {/* Add more tabs as needed */}
         
@@ -79,11 +109,26 @@ function Dashboard() {
       </div>
       {/* Content area */}
       <div className="content">
+        {/* Render content based on the activeTab */}
         {activeTab === "UserProfile" && <UserProfile />}
-        {activeTab === "MeetingNotes" && <MeetingNotes />}
+        {activeTab === "MeetingNotes" && (
+          <div className="user-profile-content">
+            <MeetingNotes />
+          </div>
+        )}
         {activeTab === "TodoList" && <TodoList />}
         {activeTab === "ClassicGames" && <ClassicGames />}
         {activeTab === "News" && <News />}
+        {activeTab === "Leave" && (
+          <div className="leave-content">
+            {/* Add content for Leave tab here */}
+          </div>
+        )}
+        {activeTab === "Settings" && (
+          <div className="settings-content">
+            {/* Add content for Settings tab here */}
+          </div>
+        )}
         {/* Add content for other tabs here */}
       </div>
     </div>
@@ -91,4 +136,3 @@ function Dashboard() {
 }
 
 export default Dashboard;
-

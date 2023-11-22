@@ -1,98 +1,33 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "./AuthenticatedWelcome.css";
 
-function UserProfile() {
-  const [isEditing, setIsEditing] = useState(false);
-  const [photoUrl, setPhotoUrl] = useState(""); // Store user's photo URL
-  const [role, setRole] = useState(""); // Store user's role/position
-  const [contactInfo, setContactInfo] = useState(""); // Store user's contact information
+function AuthenticatedWelcome() {
+  const navigate = useNavigate();
+  const [isLoading, setIsLoading] = useState(true);
 
-  // Function to handle the "Edit" button click
-  const handleEditClick = () => {
-    setIsEditing(true);
-  };
-
-  // Function to handle the "Save" button click
-  const handleSaveClick = () => {
-    // Save the edited data (you can add logic here to update the user profile)
-    setIsEditing(false);
-  };
-
-  // Function to handle the "Cancel" button click
-  const handleCancelClick = () => {
-    // Reset the input fields and exit edit mode
-    setIsEditing(false);
-  };
-
+  // Automatically redirect to the dashboard page after 5 seconds
   useEffect(() => {
-    // Fetch user profile data here and populate the state variables
-    // Example:
-    // const fetchData = async () => {
-    //   const response = await fetch("/api/userProfile");
-    //   const data = await response.json();
-    //   setPhotoUrl(data.photoUrl);
-    //   setRole(data.role);
-    //   setContactInfo(data.contactInfo);
-    // };
-    // fetchData();
-  }, []);
+    const timer = setTimeout(() => {
+      setIsLoading(false); // Hide loading animation after 5 seconds
+      navigate("/dashboard");
+    }, 5000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+  }, [navigate]);
 
   return (
-    <div className="user-profile">
-      <div className="profile-photo">
-        <div className="photo-upload">
-          <input
-            type="file"
-            accept="image/*"
-            onChange={(e) => setPhotoUrl(URL.createObjectURL(e.target.files[0]))}
-            disabled={!isEditing}
-          />
-          {photoUrl ? (
-            <img src={photoUrl} alt="User Profile" />
-          ) : (
-            <div className="empty-profile">Upload your photo here</div>
-          )}
+    <div className="welcome-container">
+      {isLoading && (
+        <div className="loading-animation">
+          {/* You can replace this with your preferred loading animation */}
+          <div className="loading-spinner"></div>
         </div>
-      </div>
-      <div className="profile-info">
-        <h2>Personal Information</h2>
-        <div className="info-field">
-          <label>Role/Position:</label>
-          {isEditing ? (
-            <input
-              type="text"
-              value={role}
-              onChange={(e) => setRole(e.target.value)}
-            />
-          ) : (
-            <span>{role}</span>
-          )}
-        </div>
-        <div className="info-field">
-          <label>Contact Information:</label>
-          {isEditing ? (
-            <input
-              type="text"
-              value={contactInfo}
-              onChange={(e) => setContactInfo(e.target.value)}
-            />
-          ) : (
-            <span>{contactInfo}</span>
-          )}
-        </div>
-        <div className="profile-buttons">
-          {isEditing ? (
-            <>
-              <button onClick={handleSaveClick}>Save</button>
-              <button onClick={handleCancelClick}>Cancel</button>
-            </>
-          ) : (
-            <button onClick={handleEditClick}>Edit</button>
-          )}
-        </div>
-      </div>
+      )}
     </div>
   );
 }
 
-export default UserProfile;
+export default AuthenticatedWelcome;

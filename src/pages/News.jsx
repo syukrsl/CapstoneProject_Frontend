@@ -24,7 +24,11 @@ function News() {
       try {
         const response = await fetch(url);
         const data = await response.json();
+        if (Array.isArray(data.articles)) {
         setter(data.articles);
+        } else {
+        console.log('Invalid data format: ',data);
+        }
       } catch (error) {
         console.error(error);
       }

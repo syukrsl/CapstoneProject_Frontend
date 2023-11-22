@@ -1,65 +1,68 @@
-      .news-card {
-      background-color: #f5f8fa; /* Light blue-gray background */
-      border: 1px solid #e1e8ed;
-      border-radius: 10px;
-      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-      margin-bottom: 20px;
-      padding: 20px;
-    }
-    
-    /* Style the card title */
-    .card-title {
-      font-size: 24px;
-      color: #1da1f2; /* Twitter blue */
-    }
-    
-    /* Style the news categories container */
-    .news-categories {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-    }
-    
-    /* Style each news category */
-    .category {
-      flex-basis: 48%; /* Adjust as needed for spacing between categories */
-      margin-bottom: 20px;
-      padding: 10px;
-      background-color: #fff; /* White background */
-      border-radius: 8px;
-      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-    }
-    
-    /* Style the category headers with bold font */
-    .category h2 {
-      font-size: 20px;
-      font-weight: bold;
-      background-color: #1da1f2; /* Twitter blue background for headers */
-      color: #fff; /* White text color for headers */
-      padding: 10px;
-      border-radius: 8px 8px 0 0; /* Rounded top corners */
-      margin: 0;
-    }
-    
-    /* Style the headlines list */
-    ul {
-      list-style-type: none;
-      padding: 0;
-    }
-    
-    /* Style the headlines items */
-    ul li {
-      margin-bottom: 10px;
-    }
-    
-    /* Style the links */
-    a {
-      color: #1da1f2; /* Twitter blue */
-      text-decoration: none;
-    }
-    
-    /* Style the links on hover */
-    a:hover {
-      text-decoration: underline;
-    }
-    
+/* news.css */
+
+/* Update the background color to match the rest of the pages */
+.news-card {
+  background-color: #4f4f4f; /* Background color matching UserProfile page */
+  border: 1px solid #7f8e98;
+  border-radius: 10px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  margin-bottom: 20px;
+  padding: 20px;
+
+}
+
+/* Update the card title color */
+.card-title {
+  font-size: 24px;
+  color: #1da1f2; /* Twitter blue, matching the rest of the pages */
+}
+
+/* Style the news categories container */
+.news-categories {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+/* Style each news category */
+.category {
+  flex-basis: 47%;
+  margin-bottom: 20px;
+  padding: 10px; /* Smaller padding for individual categories */
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+/* Style the category headers with bold font */
+.category h2 {
+  font-size: 20px;
+  font-weight: bold;
+  background-color: #597586;
+  color: #fff;
+  padding: 10px;
+  border-radius: 8px 8px 0 0;
+  margin: 0;
+}
+
+/* Style the headlines list */
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+/* Style the headlines items */
+ul li {
+  margin-bottom: 10px;
+}
+
+/* Style the links */
+a {
+  color: #597586; /* Twitter blue */
+  text-decoration: none;
+}
+
+/* Style the links on hover */
+a:hover {
+  text-decoration: underline;
+}

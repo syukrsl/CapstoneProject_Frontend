@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+
 import "./UserProfile.css";
 
 function UserProfile() {
@@ -15,11 +15,7 @@ function UserProfile() {
   const [emailBackup, setEmailBackup] = useState("");
   const [contactNumberBackup, setContactNumberBackup] = useState("");
   const [dateOfBirthBackup, setDateOfBirthBackup] = useState("");
-  const navigate = useNavigate();
 
-  const goToAuthenticatedHome = () => {
-    navigate("/authenticated-home");
-  };
 
   const toggleEdit = () => {
     if (isEditable) {
@@ -157,7 +153,6 @@ function UserProfile() {
         </div>
       </div>
       <div className="profile-actions">
-        {!isEditable && <button onClick={goToAuthenticatedHome}>Back to Home</button>}
         {isEditable ? (
           <>
             <button onClick={saveChanges}>Save Changes</button>

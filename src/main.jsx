@@ -7,6 +7,7 @@ import { BrowserRouter } from 'react-router-dom';
 const root = document.getElementById('root');
 const reactRoot = createRoot(root);
 
+
 reactRoot.render(
   <React.StrictMode>
     <BrowserRouter>

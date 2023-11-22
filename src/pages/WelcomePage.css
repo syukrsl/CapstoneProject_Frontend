@@ -22,7 +22,7 @@ body {
     
     /* Header text color */
     h1 {
-      color: #1da1f2; /* Twitter blue */
+      color: #2e4956; /* Twitter blue */
     }
     
     /* Input fields and button styles */
@@ -47,26 +47,25 @@ body {
     }
     
     button {
-      background-color: #1da1f2; /* Twitter blue */
+      background-color: #8e8e8e; /* Twitter blue */
       color: #fff; /* White text color */
       font-size: 16px;
       border: none;
       border-radius: 5px;
       cursor: pointer;
-      transition: background-color 0.05s;
     }
     
     button:hover {
-      background-color: #0e71a1; /* Darker blue on hover */
+      background-color: #2e4956; /* Darker blue on hover */
     }
     
     /* Login link color */
     p {
-      color: #1da1f2; /* Twitter blue for links */
+      color: #000000; /* Twitter blue for links */
     }
     
     /* Link hover color */
     a {
-      color: #0e71a1; /* Darker blue on hover */
+      color: #2e4956; /* Darker blue on hover */
     }
     

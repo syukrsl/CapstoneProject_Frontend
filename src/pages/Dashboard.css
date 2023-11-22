@@ -30,14 +30,29 @@
   text-decoration: none;
 }
 
-
-.tab-item:hover {
-  background-color: #4f4f4f; /* Slightly lighter gray on hover */
-}
-
+/* Update styles for the active tab */
 .tab-item.active {
-  background-color: #4f4f4f; /* Active tab background color */
+  background-color: #4f4f4f; /* Active tab background color, matching UserProfile page */
+  font-weight: bold; /* Make the active tab text bold */
+  border-right: 5px solid #1da1f2; /* Add a blue border to the active tab */
 }
+
+/* Add styles for the content area to match UserProfile page */
+.content {
+  flex-grow: 1; /* Expand to fill the remaining space */
+  background-color: #4f4f4f; /* Background color matching UserProfile page */
+  padding: 20px; /* Add some padding to the content */
+  border-top-right-radius: 10px; /* Rounded corner for the top-right corner */
+  border-bottom-right-radius: 10px; /* Rounded corner for the bottom-right corner */
+  overflow-y: auto; /* Add vertical scroll if content overflows */
+}
+
+/* Add styles to make text inside content area white */
+.content h2 {
+  color: #fff; /* White text color */
+}
+
+/* ... (existing styles) */
 
 /* Spacer */
 .spacer {
@@ -62,4 +77,4 @@
   font-size: 24px;
 }
 
-
+/* ... (existing styles) */

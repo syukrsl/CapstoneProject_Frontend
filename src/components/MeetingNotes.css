@@ -1,69 +1,103 @@
 .meeting-card {
-      background-color: #fff;
-      border: 1px solid #e1e8ed;
-      border-radius: 10px;
-      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-      margin-bottom: 20px;
-      padding: 20px;
-    }
-    
-    .card-title {
-      font-size: 24px;
-      background-color: #1da1f2; /* Twitter blue */
-      color: #fff;
-      margin-top: 10px; /* Add margin to the top */
-    }
-    
-    .form-control {
-      border: none;
-      border-bottom: 1px solid #e1e8ed;
-      border-radius: 0;
-      margin-bottom: 20px;
-      padding: 15px 0;
-      resize: vertical; /* Allow vertical resizing */
-      min-height: 100px; /* Set a minimum height */
-      width: 80%; /* Stretch the textarea to the right */
-      padding-left: 10px; /* Add left padding */
-    }
-    
-    .add-button {
-      background-color: #1da1f2; /* Twitter blue */
-      color: #fff;
-      margin-top: 10px; /* Add margin to the top */
-    }
-    
-    .add-button:hover {
-      background-color: #0e71c7; /* Darker blue */
-    }
-    
-    .notes-list {
-      list-style-type: none;
-      padding: 0;
-    }
-    
-    .note-item {
-      display: flex;
-      justify-content: space-between; /* Push content and timestamp to the right */
-      border: 1px solid #e1e8ed;
-      border-radius: 10px;
-      padding: 10px;
-      margin-bottom: 20px;
-    }
-    
-    .note-content {
-      font-size: 18px;
-    }
-    
-    .note-timestamp {
-      font-size: 12px; /* Smaller font size */
-      color: #657786; /* Twitter gray */
-      flex-shrink: 0; /* Prevent timestamp from shrinking with content */
-      margin-left: 10px; /* Add space between content and timestamp */
-      margin-right: 10px; /* Add space between content and timestamp */
-    }
-    
-    /* Additional style for the textarea in edit mode */
-    .note-item.editing .form-control {
-      width: 80%; /* Stretch the textarea to the right in edit mode */
-    }
-    
+  background-color: #f5f5f5;
+  border: 1px solid #e1e8ed;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  padding: 20px;
+}
+
+.card-title {
+  font-size: 24px;
+  background-color: #485460; /* Blue */
+  color: #fff; /* White text color */
+  margin-top: 10px; /* Add margin to the top */
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.form-control {
+  border: 1px solid #3b597a;
+  border-radius: 5px;
+  margin-bottom: 18px;
+  margin-right: 10px;
+  padding: 15px;
+  resize: vertical;
+  min-height: 100px;
+  width: 98%;
+  font-size: 16px;
+}
+
+.add-button {
+  background-color: #485460; /* Blue */
+  color: #fff; /* White text color */
+  margin-top: 10px;
+  margin-bottom: 20px;
+  width: 10%;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+}
+
+.add-button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+.notes-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.note-item {
+  background-color: #fff;
+  border: 1px solid #3b597a;
+  border-radius: 5px;
+  padding: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.note-buttons button {
+  margin: 5px;
+}
+
+.note-buttons {
+  display: flex;
+  align-items: center;
+}
+
+.note-content {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.note-timestamp {
+  font-size: 12px;
+  color: #999;
+}
+
+.edit-textarea {
+  width: 100%;
+}
+
+/* Additional style for the textarea in edit mode */
+.note-item.editing .form-control {
+  border: 1px solid #007bff; /* Blue border in edit mode */
+  padding: 10px;
+}
+
+.note-item.editing .form-control:focus {
+  border: 1px solid #0056b3; /* Darker blue on focus */
+}
+
+.note-item.editing .note-buttons button {
+  background-color: #007bff; /* Blue buttons in edit mode */
+  color: #fff;
+}
+
+.note-item.editing .note-buttons button:hover {
+  background-color: #0056b3; /* Darker blue on hover in edit mode */
+}

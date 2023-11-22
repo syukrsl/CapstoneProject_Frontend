@@ -1,29 +1,25 @@
 /* AuthenticatedWelcome.css */
 
 body {
-      background-color: #f5f8fa; /* Light blue-gray background */
-    }
-    
-    /* Center the content vertically and horizontally */
-    .authenticated-welcome-page {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 100vh; /* Full viewport height */
-    }
-    
-    /* Card-like container for the welcome content */
-    .welcome-card {
-      background-color: #ffffff; /* White card background */
-      border-radius: 10px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      padding: 20px;
-      text-align: center;
-    }
-    
-    /* Header text color */
-    h1 {
-      color: #1da1f2; /* Twitter blue */
-    }
-    
+  background-color: #f5f8fa; /* Light blue-gray background */
+}
+
+/* Center the content vertically and horizontally */
+.welcome-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* Full viewport height */
+}
+
+/* Loading animation */
+.loading-animation {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  background: rgba(32, 59, 71, 0.382)
+      url("https://media.giphy.com/media/8agqybiK5LW8qrG3vJ/giphy.gif") center
+      no-repeat;
+  z-index: 1;
+}

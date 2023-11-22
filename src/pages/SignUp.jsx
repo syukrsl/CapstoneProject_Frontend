@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "./SignUp.css"; // Import your CSS file for styling
-
 function SignUp() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -39,13 +38,12 @@ function SignUp() {
   }
 };
 
-  
+
 
   return (
     <div className="welcome-page">
       <div className="login-card">
         <h1>Welcome to Sphere</h1>
-
         {/* Sign-up form */}
         <form>
           <input
@@ -68,7 +66,6 @@ function SignUp() {
           />
           <button onClick={handleSignUp}>Sign Up</button>
         </form>
-
         {/* Sign-in link */}
         <p>
           Already have an account? <Link to="/sign-in">Sign In</Link>
@@ -77,5 +74,4 @@ function SignUp() {
     </div>
   );
 }
-
 export default SignUp;
