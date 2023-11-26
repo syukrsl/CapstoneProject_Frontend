@@ -5,6 +5,17 @@ import MeetingNotes from "../components/MeetingNotes.jsx";
 import TodoList from "../components/TodoList.jsx";
 import ClassicGames from "../components/ClassicGames.jsx";
 import News from "./News.jsx";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faUser } from "@fortawesome/free-regular-svg-icons";
+import { faCalendarAlt } from '@fortawesome/free-regular-svg-icons';
+import { faClipboard } from '@fortawesome/free-regular-svg-icons';
+import { faList } from '@fortawesome/free-solid-svg-icons';
+import { faNewspaper } from '@fortawesome/free-regular-svg-icons';
+import { faGamepad } from '@fortawesome/free-solid-svg-icons';
+import { faGlobe } from '@fortawesome/free-solid-svg-icons';
+
+
+
 
 function Dashboard() {
   const [activeTab, setActiveTab] = useState(null); // Initially set to null
@@ -46,45 +57,55 @@ function Dashboard() {
   return (
     <div className="dashboard">
       <div className="sidebar">
-        <div className="dashboard-header">
-          SPHERE {/* Add the header here */}
+      <div className="dashboard-header">
+        <FontAwesomeIcon icon={faGlobe} size="xl" />
+        SPHERE
         </div>
+        
         {/* Tabbed navigation */}
-        <div
-          className={`tab-item ${activeTab === "UserProfile" ? "active" : ""}`}
-          onClick={() => handleTabChange("UserProfile")}
-        >
-          User Profile
+        <div className="tab-item" onClick={() => handleTabChange("UserProfile")}>
+        <FontAwesomeIcon icon={faUser} className="fa-beat" beat size="sm" />
+        User Profile
         </div>
+
         <div
-          className={`tab-item ${activeTab === "Leave" ? "active" : ""}`}
-          onClick={() => handleTabChange("Leave")}
-        >
-          Leave & Absences
+        className={`tab-item ${activeTab === "Leave" ? "active" : ""}`}
+        onClick={() => handleTabChange("Leave")}
+>
+        <FontAwesomeIcon icon={faCalendarAlt} className="fa-beat" />
+        Leave & Absences
         </div>
+
         <div
-          className={`tab-item ${activeTab === "MeetingNotes" ? "active" : ""}`}
-          onClick={() => handleTabChange("MeetingNotes")}
+        className={`tab-item ${activeTab === "MeetingNotes" ? "active" : ""}`}
+        onClick={() => handleTabChange("MeetingNotes")}
         >
-          Meeting Notes
+        <FontAwesomeIcon icon={faClipboard} className="fa-beat"  />
+        Meeting Notes
         </div>
+
         <div
-          className={`tab-item ${activeTab === "TodoList" ? "active" : ""}`}
-          onClick={() => handleTabChange("TodoList")}
+        className={`tab-item ${activeTab === "TodoList" ? "active" : ""}`}
+        onClick={() => handleTabChange("TodoList")}
         >
-          TodoList
+        <FontAwesomeIcon icon={faList} className="fa-beat" />
+        TodoList
         </div>
+
         <div
-          className={`tab-item ${activeTab === "News" ? "active" : ""}`}
-          onClick={() => handleTabChange("News")}
+        className={`tab-item ${activeTab === "News" ? "active" : ""}`}
+        onClick={() => handleTabChange("News")}
         >
-          News
+        <FontAwesomeIcon icon={faNewspaper} className="fa-beat" />
+        News
         </div>
+
         <div
-          className={`tab-item ${activeTab === "ClassicGames" ? "active" : ""}`}
-          onClick={() => handleTabChange("ClassicGames")}
+        className={`tab-item ${activeTab === "ClassicGames" ? "active" : ""}`}
+        onClick={() => handleTabChange("ClassicGames")}
         >
-          Classic Games
+        <FontAwesomeIcon icon={faGamepad} className="fa-beat" />
+        Classic Games
         </div>
         {/* Add more tabs as needed */}
         
