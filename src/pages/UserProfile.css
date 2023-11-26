@@ -1,24 +1,22 @@
-/* UserProfile.css */
-
 .user-profile {
-  background-color: #4f4f4f; /* Twitter blue background */
-  color: #fff; /* White text color */
-  padding: 20px;
+  background-color: #8b8f91;
+  color: #fff; 
+  padding: 25px;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  width: 1000%; /* Full width */
-  max-width: 800px; /* Maximum card width */
+  width: 1000%; 
+  max-width: 800px;
   margin: auto;
   height: 97%;
   display: flex;
-  flex-direction: column; /* Adjust the layout to be a column */
-  justify-content: space-between; /* Vertically space the content */
-  align-items: center; /* Center the content horizontally */
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .profile-header {
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: px;
   color: #c2bebe;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
@@ -32,23 +30,22 @@
 
 .profile-content {
   display: flex;
-  flex-direction: column; /* Adjust the layout to be a column */
-  justify-content: space-between; /* Vertically space the content */
-  align-items: center; /* Center the content horizontally */
-  margin-top: 70px; /* Add a margin to push the content lower */
+  flex-direction: column; 
+  justify-content: space-between;
+  align-items: center; 
+  margin-top: 70px; 
 }
-
 
 .profile-photo {
   width: 150px;
   height: 150px;
-  border: 2px dashed #ffffff; /* White dashed border */
+  border: 2px dashed #ffffff;
   border-radius: 50%;
   overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 20px; /* Add some space between the photo and details */
+  margin-bottom: 20px; 
 }
 
 .photo-box {
@@ -56,8 +53,8 @@
   height: 100%;
   text-align: center;
   display: flex;
-  flex-direction: column; /* Center content vertically */
-  justify-content: center; /* Center content horizontally */
+  flex-direction: column;
+  justify-content: center; 
 }
 
 .photo-box img {
@@ -68,9 +65,9 @@
 
 .photo-placeholder {
   text-align: center;
-  color: #ffffff; /* White text color */
-  font-size: 12px; /* Adjust the font size */
-  margin-top: 5px; /* Add some space between the text and circle */
+  color: #ffffff; 
+  font-size: 12px;
+  margin-top: 5px;
 }
 
 .photo-upload {
@@ -81,41 +78,39 @@
   display: flex;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   margin-top: 80px;
-  flex-direction: column; /* Center the content vertically */
-  align-items: left; /* Align the content to the left */
+  flex-direction: column;
+  align-items: left; 
 }
 
 .detail {
-  display: flex; /* Add flex display */
-  align-items: center; /* Align items vertically */
-  margin-bottom: 20px; /* Increase the margin to create more space */
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
 }
 
 .detail label {
   font-weight: bold;
-  width: 150px; /* Fixed width for labels */
-  min-width: 150px; /* Ensure it doesn't shrink below a certain width */
-  text-align: right; /* Align the text to the right */
-  margin-right: 10px; /* Add some space between the label and input */
+  width: 150px; 
+  min-width: 150px; 
+  text-align: right;
+  margin-right: 10px; 
 }
-
-/* Add CSS for input elements inside .edit-input */
 .edit-input input {
-  flex-grow: 1; /* Allow input to take up remaining space */
-  padding: 5px; /* Add padding for better visual appearance */
-  border-radius: 4px; /* Optional: round the borders */
-  border: 1px solid #ccc; /* Optional: add a border */
+  flex-grow: 1; 
+  padding: 5px;
+  border-radius: 4px;
+  border: 1px solid #ccc; 
 }
 
 .profile-actions {
   text-align: center;
-  margin-top: auto; /* Push the buttons to the bottom */
-  padding-bottom: 20px; /* Add some space at the bottom */
+  margin-top: auto; 
+  padding-bottom: 20px; 
 }
 
 button {
-  background-color: #ffffff; /* White background */
-  color: #556067; /* Twitter blue text color */
+  background-color: #52889a;
+  color: #ffffff; 
   font-size: 16px;
   width: 100%;
   border: none;
@@ -127,5 +122,5 @@ button {
 }
 
 button:hover {
-  background-color: #a2d0e7; /* Darker blue on hover */
+  background-color: #41688a;
 }

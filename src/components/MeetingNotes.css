@@ -1,5 +1,5 @@
 .meeting-card {
-  background-color: #f5f5f5;
+  background-color: #5c5c5c;
   border: 1px solid #e1e8ed;
   border-radius: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -9,9 +9,9 @@
 
 .card-title {
   font-size: 24px;
-  background-color: #485460; /* Blue */
-  color: #fff; /* White text color */
-  margin-top: 10px; /* Add margin to the top */
+  background-color: #52889a;
+  color: #fff; 
+  margin-top: 10px; 
   padding: 10px;
   border-radius: 5px;
   text-align: center;
@@ -30,8 +30,8 @@
 }
 
 .add-button {
-  background-color: #485460; /* Blue */
-  color: #fff; /* White text color */
+  background-color: #52889a;
+  color: #fff;
   margin-top: 10px;
   margin-bottom: 20px;
   width: 10%;
@@ -41,7 +41,7 @@
 }
 
 .add-button:hover {
-  background-color: #0056b3; /* Darker blue on hover */
+  background-color: #41688a;
 }
 
 .notes-list {
@@ -83,21 +83,20 @@
   width: 100%;
 }
 
-/* Additional style for the textarea in edit mode */
 .note-item.editing .form-control {
-  border: 1px solid #007bff; /* Blue border in edit mode */
+  border: 1px solid #007bff; 
   padding: 10px;
 }
 
 .note-item.editing .form-control:focus {
-  border: 1px solid #0056b3; /* Darker blue on focus */
+  border: 1px solid #0056b3; 
 }
 
 .note-item.editing .note-buttons button {
-  background-color: #007bff; /* Blue buttons in edit mode */
+  background-color: #007bff;
   color: #fff;
 }
 
 .note-item.editing .note-buttons button:hover {
-  background-color: #0056b3; /* Darker blue on hover in edit mode */
+  background-color: #0056b3; 
 }

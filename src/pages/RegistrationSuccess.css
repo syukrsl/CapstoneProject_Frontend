@@ -1,10 +1,9 @@
-/* RegistrationSuccess.css */
+
 
 body {
-      background-color: #f5f8fa; /* Light blue-gray background */
+      background-color: #f5f8fa; 
     }
     
-    /* Center the content vertically and horizontally */
     .registration-success-page {
       display: flex;
       flex-direction: column;
@@ -13,54 +12,40 @@ body {
       height: 100vh; /* Full viewport height */
     }
     
-    /* Card-like container for the success message */
     .success-card {
-      background-color: #ffffff; /* White card background */
+      background-color: #ffffff; 
       border-radius: 10px;
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
       padding: 20px;
       text-align: center;
     }
-    
-    /* Header text color */
     h1 {
-      color: #586577; /* Twitter blue */
+      color: #586577;
     }
-    
-    /* RegistrationSuccess.css */
-
-/* ... Your existing CSS rules ... */
-
-/* Custom styles for the dashboard button */
-.dashboard-button {
-  background-color: #274d64; /* Twitter blue */
-  color: #ffffff; /* White text color */
-  border: none;
-  border-radius: 5px;
-  padding: 10px 20px;
-  margin-top: 10px; /* Adjust margin as needed */
-  cursor: pointer;
-  transition: background-color 0.3s ease; /* Smooth background color transition */
-
-  /* Add hover effect */
-  &:hover {
-    background-color: #46819e; /* Darker blue on hover */
-  }
-}
-
-.logout-button {
-  background-color: #274d64; /* Red background */
-  color: #ffffff; /* White text color */
-  border: none;
-  border-radius: 5px;
-  font-size: 16px;
-  padding: 4px 20px;
-  margin-top: 2px; /* Adjust margin as needed */
-  cursor: pointer;
-  transition: background-color 0.3s ease; /* Smooth background color transition */
-
-  /* Add hover effect */
-  &:hover {
-    background-color: rgb(212, 41, 15); /* Darker red on hover */
-  }
-}
+    .dashboard-button {
+      background-color: #274d64;
+      color: #ffffff;
+      border: none;
+      border-radius: 5px;
+      padding: 10px 20px;
+      margin-top: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    &:hover {
+      background-color: #46819e; 
+    }
+    }
+    .logout-button {
+      background-color: #274d64; 
+      color: #ffffff; 
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      padding: 4px 20px;
+      margin-top: 2px;
+      cursor: pointer;
+      transition: background-color 0.3s ease; 
+    &:hover {
+      background-color: rgb(212, 41, 15); 
+      }
+    }

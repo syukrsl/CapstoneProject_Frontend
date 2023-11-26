@@ -1,70 +1,54 @@
-body {
-  background-color: #3282b8; /* Light blue-gray background */
-}
-
-/* Center the content vertically and horizontally */
 .sign-in-page {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh; /* Full viewport height */
+  height: 100vh;
+  background-color: #888383;
 }
-
-/* Card-like container for the sign-in form */
 .login-card {
-  background-color: #484747; /* White card background */
+  background-color: #a6a2a2;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   padding: 20px;
   text-align: center;
-  width: 90%; /* Match the width with the "SignUp" page */
-  max-width: 400px; /* Adjust the max-width as needed */
+  width: 90%;
+  max-width: 500px; 
 }
-
-/* Header text color */
 h2 {
-  color: #2e4956; /* Twitter blue */
+  color: #2e4956; 
 }
-
-/* Input fields and button styles */
 input[type="email"],
 input[type="password"],
 button {
-  width: 100%;
+  width: 60%; 
   padding: 10px;
   margin: 10px 0;
-  border: 1px solid #d1d9e0; /* Light gray border */
-  border-radius: 5px;
+  border: 1px solid rgb(131, 131, 133); 
+  border-radius: 10px; 
+  background-color: #d3d2d2;
 }
-
 input[type="email"],
 input[type="password"] {
   height: 40px;
   font-size: 16px;
   padding-left: 10px;
 }
-
 button {
-  background-color: #2e4956; /* Twitter blue */
-  color: #fff; /* White text color */
-  font-size: 16px;
+  background-color: #2e4956; 
+  color: #fff; 
   border: none;
-  border-radius: 5px;
+  border-radius: 10px; 
   cursor: pointer;
   transition: background-color 0.2s ease-in-out;
 }
 
 button:hover {
-  background-color: #2e4956; /* Darker blue on hover */
+  background-color: #2e4956;
 }
-
-/* Sign-up and Home link colors */
 p {
-  color: #2e4956; /* Twitter blue for links */
+  color: #2e4956;
 }
-
-/* Link hover color */
 a {
-  color: #2e4956; /* Darker blue on hover */
+  color: #2e4956;
 }

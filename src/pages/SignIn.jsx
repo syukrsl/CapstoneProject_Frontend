@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "./SignIn.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGlobe } from "@fortawesome/free-solid-svg-icons";
 
 function SignIn() {
   const [email, setEmail] = useState("");
@@ -45,7 +47,8 @@ function SignIn() {
   return (
     <div className="sign-in-page">
       <div className="login-card">
-        <h2>Sign In</h2>
+        <h2>Sign In to SPHERE
+        <FontAwesomeIcon icon={faGlobe} spin size="xl"/></h2>
 
         <form>
           <input

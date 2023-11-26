@@ -1,16 +1,15 @@
-/* AuthenticatedWelcome.css */
 
 body {
-  background-color: #f5f8fa; /* Light blue-gray background */
+  background-color: #2a5571; 
 }
 
-/* Center the content vertically and horizontally */
 .welcome-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 100vh; /* Full viewport height */
+  background-color: #2a5571;
 }
 
 /* Loading animation */

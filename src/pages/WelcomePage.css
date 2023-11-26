@@ -1,31 +1,27 @@
 body {
-      background-color: #3f4448; /* Light blue-gray background */
+      background-color: #3f4448; 
     }
-    
-    /* Center the content vertically and horizontally */
+
     .welcome-page {
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      height: 100vh; /* Full viewport height */
+      height: 100vh;
     }
     
-    /* Card-like container for the sign-up form */
     .login-card {
-      background-color: #3f3f3f; /* White card background */
+      background-color: #3f3f3f; 
       border-radius: 10px;
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
       padding: 20px;
       text-align: center;
     }
     
-    /* Header text color */
     h1 {
-      color: #2e4956; /* Twitter blue */
+      color: #2e4956;
     }
     
-    /* Input fields and button styles */
     input[type="text"],
     input[type="email"],
     input[type="password"],
@@ -33,7 +29,7 @@ body {
       width: 90%;
       padding: 10px;
       margin: 10px 0;
-      border: 1px solid rgb(146, 146, 154);/* Light gray border */
+      border: 1px solid rgb(146, 146, 154);
       border-radius: 10px;
       
     }
@@ -47,8 +43,8 @@ body {
     }
     
     button {
-      background-color: #8e8e8e; /* Twitter blue */
-      color: #fff; /* White text color */
+      background-color: #8e8e8e; 
+      color: #fff; 
       font-size: 16px;
       border: none;
       border-radius: 5px;
@@ -56,16 +52,14 @@ body {
     }
     
     button:hover {
-      background-color: #2e4956; /* Darker blue on hover */
+      background-color: #2e4956; 
     }
-    
-    /* Login link color */
+  
     p {
-      color: #000000; /* Twitter blue for links */
+      color: #000000;
     }
     
-    /* Link hover color */
     a {
-      color: #2e4956; /* Darker blue on hover */
+      color: #2e4956; 
     }
     

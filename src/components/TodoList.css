@@ -8,13 +8,11 @@
       padding: 20px;
     }
     
-    /* Style the card title */
     .card-title {
       font-size: 24px;
-      color: #e1eaf0; /* Twitter blue */
+      color: #e1eaf0;
     }
     
-    /* Style the task input */
     .form-control.stretch-input {
       border: none;
       border-bottom: 1px solid #e1e8ed;
@@ -26,24 +24,21 @@
       padding-left: 10px;
     }
     
-    /* Style the add button */
     .add-button {
-      background-color: #1da1f2; /* Twitter blue */
+      background-color: #1da1f2;
       color: #fff;
       margin-top: 10px;
     }
     
     .add-button:hover {
-      background-color: #0e71c7; /* Darker blue on hover */
+      background-color: #41688a;
     }
     
-    /* Style the task list */
     .task-list {
       list-style-type: none;
       padding: 0;
     }
     
-    /* Style the task items */
     .task-item {
       display: flex;
       justify-content: space-between;
@@ -53,12 +48,10 @@
       margin-bottom: 20px;
     }
     
-    /* Style the task content */
     .task-content {
       font-size: 18px;
     }
     
-    /* Additional style for the input in edit mode */
     .task-item.editing .form-control {
       width: 80%;
     }
@@ -66,19 +59,18 @@
     .filter-dropdown {
       width: 100%;
       margin-top: 10px;
-      height: 10px; /* Adjust the height as needed */
+      height: 10px; 
     }
     
     .filter-dropdown option {
-      font-size: 16px; /* Adjust the font size as needed */
+      font-size: 16px;
     }
     /* Style for the checkbox */
 .task-item input[type="checkbox"] {
-  margin-right: 5px; /* Add spacing between the checkbox and task text */
-  vertical-align: middle; /* Align the checkbox vertically with the text */
+  margin-right: 5px; 
+  vertical-align: middle;
 }
 
-/* Additional styling for the input in edit mode */
 .task-item.editing .form-control {
   width: 80%;
 }
