@@ -5,6 +5,7 @@ import MeetingNotes from "../components/MeetingNotes.jsx";
 import TodoList from "../components/TodoList.jsx";
 import ClassicGames from "../components/ClassicGames.jsx";
 import News from "./News.jsx";
+import Leave from "./Leave.jsx";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser } from "@fortawesome/free-regular-svg-icons";
 import { faCalendarAlt } from '@fortawesome/free-regular-svg-icons';
@@ -133,11 +134,7 @@ function Dashboard() {
         {activeTab === "TodoList" && <TodoList />}
         {activeTab === "ClassicGames" && <ClassicGames />}
         {activeTab === "News" && <News />}
-        {activeTab === "Leave" && (
-          <div className="leave-content">
-            {/* Add content for Leave tab here */}
-          </div>
-        )}
+        {activeTab === "Leave" && <Leave />}
         {activeTab === "Settings" && (
           <div className="settings-content">
             {/* Add content for Settings tab here */}

@@ -12,6 +12,7 @@ import Dashboard from './pages/Dashboard';
 import AuthenticatedWelcome from "./pages/AuthenticatedWelcome"; 
 import RegistrationSuccess from "./pages/RegistrationSuccess";
 import UserProfile from './pages/UserProfile.jsx';
+import Leave from './pages/Leave';
 import "./App.css";
 
 function App() {
@@ -30,6 +31,7 @@ function App() {
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/registration-success" element={<RegistrationSuccess />} />
         <Route path="/user-profile" element={<UserProfile />} />
+        <Route path="/leave" element={<Leave />} />
       </Routes>
 
   );
