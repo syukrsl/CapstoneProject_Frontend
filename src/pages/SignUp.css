@@ -1,22 +1,20 @@
-body {
-      background-color: #f5f8fa; /* Light blue-gray background */
-    }
-    
-    /* Center the content vertically and horizontally */
+      /* Center the content vertically and horizontally */
     .welcome-page {
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
       height: 100vh; /* Full viewport height */
+      background-color: #888383;
     }
     
     /* Card-like container for the sign-up form */
     .login-card {
-      background-color: #ffffff; /* White card background */
+      background-color: #a6a2a2; /* White card background */
       border-radius: 10px;
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
       padding: 20px;
+      max-width: 500px;
       text-align: center;
     }
     
@@ -24,13 +22,24 @@ body {
     h1 {
       color: #2e4956; /* Twitter blue */
     }
+
+    .fa-globe {
+      margin-left: 20px; /* Space between the icon and text */
+    }
     
     /* Input fields and button styles */
     input[type="text"],
     input[type="email"],
-    input[type="password"],
+    input[type="password"] {
+      width: 70%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid rgb(131, 131, 133);/* Light gray border */
+      border-radius: 10px;
+      background-color: #d3d2d2;
+    }
     button {
-      width: 90%;
+      width: 40%;
       padding: 10px;
       margin: 10px 0;
       border: 1px solid rgb(146, 146, 154);/* Light gray border */

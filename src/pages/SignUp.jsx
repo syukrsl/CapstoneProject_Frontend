@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "./SignUp.css"; // Import your CSS file for styling
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGlobe } from '@fortawesome/free-solid-svg-icons';
+
 function SignUp() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -43,8 +46,9 @@ function SignUp() {
   return (
     <div className="welcome-page">
       <div className="login-card">
-        <h1>Welcome to Sphere</h1>
-        {/* Sign-up form */}
+        <h1>
+        Welcome to Sphere
+        <FontAwesomeIcon icon={faGlobe} spin size="xl"/></h1>
         <form>
           <input
             type="text"

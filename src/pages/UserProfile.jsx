@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-
 import "./UserProfile.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faUser } from "@fortawesome/free-regular-svg-icons";
 
 function UserProfile() {
   const [isEditable, setIsEditable] = useState(false);
@@ -9,27 +10,36 @@ function UserProfile() {
   const [email, setEmail] = useState("john.doe@example.com");
   const [contactNumber, setContactNumber] = useState("123456789");
   const [dateOfBirth, setDateOfBirth] = useState("06 Feb 2022");
+  const [address, setAddress] = useState("Tampines St");
+  const [employeeId, setEmployeeId] = useState("00399");
   const [photoUrl, setPhotoUrl] = useState("");
   const [nameBackup, setNameBackup] = useState("");
   const [roleBackup, setRoleBackup] = useState("");
   const [emailBackup, setEmailBackup] = useState("");
   const [contactNumberBackup, setContactNumberBackup] = useState("");
   const [dateOfBirthBackup, setDateOfBirthBackup] = useState("");
+  const [addressBackup, setAddressBackup] = useState("");
+  const [employeeIdBackup, setEmployeeIdBackup] = useState("");
 
 
   const toggleEdit = () => {
     if (isEditable) {
       setName(nameBackup);
       setRole(roleBackup);
+      setEmployeeId(employeeIdBackup);
       setEmail(emailBackup);
       setContactNumber(contactNumberBackup);
       setDateOfBirth(dateOfBirthBackup);
+      setAddress(addressBackup);
+     
     } else {
       setNameBackup(name);
       setRoleBackup(role);
+      setEmployeeId(employeeId);
       setEmailBackup(email);
       setContactNumberBackup(contactNumber);
       setDateOfBirthBackup(dateOfBirth);
+      setAddress(address);
     }
 
     setIsEditable((prevIsEditable) => !prevIsEditable);
@@ -49,13 +59,22 @@ function UserProfile() {
   };
 
   const saveChanges = () => {
+    setNameBackup(name);
+    setRoleBackup(role);
+    setEmailBackup(email);
+    setContactNumberBackup(contactNumber);
+    setDateOfBirthBackup(dateOfBirth);
+    setAddressBackup(address);
+    setEmployeeIdBackup(employeeId);
+
     setIsEditable(false);
   };
 
   return (
     <div className="user-profile">
       <div className="profile-header">
-        <h1>User Profile</h1>
+      <FontAwesomeIcon icon={faUser} flip size="2xl" />
+      <h1 className="profile-title">User Profile</h1>
       </div>
       <div className="profile-content">
         <div className="profile-photo">
@@ -112,6 +131,19 @@ function UserProfile() {
             )}
           </div>
           <div className="detail">
+            <label>Employee ID: </label>
+            {isEditable ? (
+              <input
+                type="text"
+                value={employeeId}
+                onChange={(e) => setEmployeeId(e.target.value)}
+                className="edit-input"
+              />
+            ) : (
+              <span>{employeeId}</span>
+            )}
+          </div>
+          <div className="detail">
             <label>Email: </label>
             {isEditable ? (
               <input
@@ -150,6 +182,20 @@ function UserProfile() {
               <span>{dateOfBirth}</span>
             )}
           </div>
+          <div className="detail">
+            <label>Address: </label>
+            {isEditable ? (
+              <input
+                type="text"
+                value={address}
+                onChange={(e) => setAddress(e.target.value)}
+                className="edit-input"
+              />
+            ) : (
+              <span>{address}</span>
+            )}
+          </div>
+          
         </div>
       </div>
       <div className="profile-actions">

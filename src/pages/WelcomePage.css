@@ -1,5 +1,5 @@
 body {
-      background-color: #f5f8fa; /* Light blue-gray background */
+      background-color: #3f4448; /* Light blue-gray background */
     }
     
     /* Center the content vertically and horizontally */
@@ -13,7 +13,7 @@ body {
     
     /* Card-like container for the sign-up form */
     .login-card {
-      background-color: #ffffff; /* White card background */
+      background-color: #3f3f3f; /* White card background */
       border-radius: 10px;
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
       padding: 20px;

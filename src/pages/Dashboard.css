@@ -26,7 +26,6 @@
 
 .dashboard-header .fa-globe {
   margin-right: 20px; /* Space between the icon and text */
-  animation: beat 1s infinite;
 }
 
 .tab-item {
@@ -91,13 +90,6 @@
 }
 
 .fa-beat {
-  animation: beat 1s infinite;
-  font-size: 0.75rem;
-  margin-right: 0.75rem;
-  
-}
-
-.fa {
   animation: beat 1s infinite;
   font-size: 0.75rem;
   margin-right: 0.75rem;
