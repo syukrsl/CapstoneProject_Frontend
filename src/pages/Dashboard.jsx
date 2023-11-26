@@ -47,7 +47,7 @@ function Dashboard() {
     <div className="dashboard">
       <div className="sidebar">
         <div className="dashboard-header">
-          Your Dashboard {/* Add the header here */}
+          SPHERE {/* Add the header here */}
         </div>
         {/* Tabbed navigation */}
         <div
