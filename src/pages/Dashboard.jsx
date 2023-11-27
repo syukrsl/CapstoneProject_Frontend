@@ -71,7 +71,7 @@ function Dashboard() {
         className={`tab-item ${activeTab === "Leave" ? "active" : ""}`}
         onClick={() => handleTabChange("Leave")}>
         <FontAwesomeIcon icon={faCalendarAlt} className="fa-beat" />
-        Leave & Absences
+        Leave Management
         </div>
 
         <div
