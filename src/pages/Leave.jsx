@@ -142,7 +142,7 @@ function Leave() {
   return (
     <div className="leave-container">
       <h1 className="leave-header">
-      <FontAwesomeIcon icon={faCalendarAlt} className="fa-beat"/>
+      <FontAwesomeIcon icon={faCalendarAlt} flip size="xs" className='leave-icon'/>
       Leave Management
       </h1>
       <div className="tabs">

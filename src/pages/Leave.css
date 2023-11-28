@@ -30,7 +30,7 @@
   background: #52889a; /* A different shade for the tab */
   display: inline-block;
   color: #fff;
-  border-radius: 3px 3px 0px 0px;
+  border-radius: 50px;
   box-shadow: 0 0.5rem 0.8rem #00000080;
 }
 
@@ -119,6 +119,7 @@ button:hover {
 .status-table, .balance-table {
   width: 100%;
   border-collapse: collapse;
+  background-color: #8e8e8e;
 }
 
 .status-table th, .status-table td,
@@ -138,4 +139,8 @@ button:hover {
   font-size: 0.75rem;
   margin-right: 0.75rem;
   
+}
+
+.leave-icon {
+  margin-right: 10px;
 }
