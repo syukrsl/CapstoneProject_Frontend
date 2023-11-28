@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import './Leave.css';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCalendarAlt } from '@fortawesome/free-regular-svg-icons';
 
 function Leave() {
   const [activeTab, setActiveTab] = useState('ApplyLeave');
@@ -139,7 +141,10 @@ function Leave() {
 
   return (
     <div className="leave-container">
-      <h1 className="leave-header">Leave Management</h1>
+      <h1 className="leave-header">
+      <FontAwesomeIcon icon={faCalendarAlt} className="fa-beat"/>
+      Leave Management
+      </h1>
       <div className="tabs">
         <label className={`tab ${activeTab === 'ApplyLeave' ? 'active' : ''}`} onClick={() => handleTabChange('ApplyLeave')}>Apply Leave</label>
         <label className={`tab ${activeTab === 'LeaveStatus' ? 'active' : ''}`} onClick={() => handleTabChange('LeaveStatus')}>Leave Status</label>

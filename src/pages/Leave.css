@@ -51,12 +51,13 @@
 
 .panel.active {
   display: block;
+  margin-left: -130px;
 }
 
 .apply-leave-form {
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: 400%;
   max-width: 400px;
   margin: 10px;
 }
@@ -130,4 +131,11 @@ button:hover {
 .status-table th, .balance-table th {
   background-color: #52889a;
   color: white;
+}
+
+.fa-beat {
+  animation: beat 1s infinite;
+  font-size: 0.75rem;
+  margin-right: 0.75rem;
+  
 }

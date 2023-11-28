@@ -40,12 +40,12 @@
 .panel {
   display: none;
   padding: 20px;
-  border: 1px solid #32557f;
+  border: 1px solid #4f4f4f;
   border-radius: 0 0 3px 3px;
 }
 
 .panel.active {
   display: block;
+  margin-right: -200px;
+  width: 900px;
 }
-
-/* Add any additional styling as needed */
